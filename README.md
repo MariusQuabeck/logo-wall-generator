@@ -67,6 +67,12 @@ You can tweak the following parameters in the script:
 - `PADDING` — spacing between logos
 - `BACKGROUND_COLOR` — RGB tuple (default is white)
 
+## TODO
+
+- create snap and brew packages
+	- create a launcher that opens the logo folder and guides trough the process
+	- add option for background image
+
 ## License
 
 This project is licensed under the **GNU GPL v3**.  
