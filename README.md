@@ -13,32 +13,49 @@ Generate a clean, padded 1920×1080 logo wall from assorted image files — perf
 
 ## Installation
 
-Install Python dependencies:
+### Step 1: Set up a virtual environment (recommended)
+
+```bash
+cd path/to/logo-wall-generator
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### Step 2: Install Python dependencies
 
 ```bash
 pip install pillow cairosvg
 ```
 
-On macOS, you may also need the following system libraries for `cairosvg`:
-
+> On macOS, you may also need these system libraries if SVGs fail:
 ```bash
 brew install cairo pango gdk-pixbuf libffi
 ```
 
 ## Usage
 
-1. Place all logo files into a folder named `logos/` (same directory as the script).
-2. Run the script:
+### First-time setup
+1. Add your logo files into `logos/` (supports `.png`, `.jpg`, `.jpeg`, `.webp`, `.svg`).
+2. Activate the virtual environment (see above).
+3. Run the script:
 
 ```bash
 python logo_wall_generator.py
 ```
 
-3. The output image will be saved as `logo_wall.png` in the current directory.
+The output will be saved as `logo_wall.png` in the same directory.
+
+### After setup (future runs)
+
+```bash
+cd path/to/logo-wall-generator
+source venv/bin/activate
+python logo_wall_generator.py
+```
 
 ## Example Output
 
-Here’s a preview of a generated logo wall (230 logos):
+Here’s a preview of a generated logo wall:
 
 ![Example output](example_output.png)
 
