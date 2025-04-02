@@ -1,0 +1,45 @@
+# --- Python build ---
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# --- Virtual environments ---
+venv/
+.env/
+
+# --- Logs and dumps ---
+*.log
+*.out
+*.pid
+*.gz
+*.tmp
+*.swp
+
+# --- macOS system files ---
+.DS_Store
+
+# --- Environment files ---
+.env
+*.env
+
+# --- Secrets and keys (just in case) ---
+*.pem
+*.key
+*.crt
+secrets.json
+config.yaml
+
+# --- Jupyter/IPython ---
+.ipynb_checkpoints
+
+# --- VSCode/PyCharm/IDE stuff ---
+.vscode/
+.idea/
+
+# --- Output ---
+logo_wall.png
+
