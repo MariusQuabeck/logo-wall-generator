@@ -71,7 +71,7 @@ You can tweak the following parameters in the script:
 
 - create snap and brew packages
 	- create a launcher that opens the logo folder and guides trough the process
-	- add option for background image
+- add option for background image
 
 ## License
 
