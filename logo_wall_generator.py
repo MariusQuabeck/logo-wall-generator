@@ -1,5 +1,6 @@
 import os
 import math
+import locale
 from PIL import Image, ImageOps
 import cairosvg
 
@@ -12,12 +13,15 @@ PADDING = 10  # Space between logos
 BACKGROUND_COLOR = (255, 255, 255)  # White
 SUPPORTED_EXTENSIONS = (".jpg", ".jpeg", ".png", ".webp", ".svg")
 
+# === LOCALE CONFIG FOR SORTING ===
+locale.setlocale(locale.LC_ALL, '')
+
 # === HELPERS ===
 def load_and_prepare_logo(path, size):
     ext = os.path.splitext(path)[1].lower()
     if ext == ".svg":
         png_path = path + ".converted.png"
-        cairosvg.svg2png(url=path, write_to=png_path)
+        cairosvg.svg2png(url=path, write_to=png_path, unsafe=True)
         img = Image.open(png_path).convert("RGBA")
         os.remove(png_path)
     else:
@@ -34,7 +38,7 @@ logo_files = sorted([
     os.path.join(LOGO_DIR, f)
     for f in os.listdir(LOGO_DIR)
     if os.path.splitext(f)[1].lower() in SUPPORTED_EXTENSIONS
-])
+], key=lambda x: locale.strxfrm(os.path.basename(x).lower()))
 
 num_logos = len(logo_files)
 if num_logos == 0:
