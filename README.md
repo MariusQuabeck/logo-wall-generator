@@ -10,6 +10,7 @@ Generate a clean, padded 1920×1080 logo wall from assorted image files — perf
 - 🧭 Logos sorted alphabetically using case-insensitive, locale-aware logic
 - 🧼 Preserves logo aspect ratios with white padding background
 - 🔁 Easy to update — just change files in the `logos/` folder and rerun
+- 📋 Shows progress in terminal, including skipped files with error messages
 - ⚠️ SVGs with external entities are supported (trusted input only via unsafe=True).
 
 ## Installation
