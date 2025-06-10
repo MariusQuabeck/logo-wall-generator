@@ -7,9 +7,10 @@ Generate a clean, padded 1920×1080 logo wall from assorted image files — perf
 - 🖼️ Fixed output size: 1920x1080
 - 🧩 Automatically arranges logos in a grid with padding
 - 📂 Supports `.png`, `.jpg`, `.jpeg`, `.webp`, and `.svg` formats
-- 🧭 Logos sorted alphabetically by filename
+- 🧭 Logos sorted alphabetically using case-insensitive, locale-aware logic
 - 🧼 Preserves logo aspect ratios with white padding background
 - 🔁 Easy to update — just change files in the `logos/` folder and rerun
+- ⚠️ SVGs with external entities are supported (trusted input only via unsafe=True).
 
 ## Installation
 
